@@ -1,5 +1,6 @@
 import './style.css';
-BACKEND_URL = process.env.BACKEND_URL;
+import 'dotenv/config'
+const BACKEND_URL = process.env.BACKEND_URL;
 
 const app = new Vue({
     el: '#app',
