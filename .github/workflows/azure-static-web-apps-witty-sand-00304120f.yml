@@ -25,6 +25,12 @@ jobs:
         run: |
           echo "BACKEND_URL: ${{ vars.BACKEND_URL }}"
 
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v2.0
+        with:
+          envkey_BACKEND_URL: ${{ vars.BACKEND_URL }}
+          directory: "start/client"
+
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
